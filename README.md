@@ -5,3 +5,4 @@ A semantic segmentation network for surface defect detection based on BSData dat
 ===
 ## BSData数据集介绍
 该数据集是一个关于金属丝杆表面缺陷的数据集，该数据集包含1104个通道3图像，以及394张带点蚀的图像注释，标注为json文件格式。官方数据模板如下：<br>
+![image](https://github.com/looog-e/surface-defect-detection/blob/main/%E5%9B%BE%E7%89%871.png)
