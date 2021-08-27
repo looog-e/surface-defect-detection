@@ -5,6 +5,10 @@ Created on Tue Aug 17 10:25:21 2021
 @author: 零
 """
 
+import torch
+import torch.nn as nn
+
+
 class LBG_layer(nn.Module):
     def __init__(self, in_feature, out_feature):
         super(LBG_layer, self).__init__()

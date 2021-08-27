@@ -5,6 +5,10 @@ Created on Tue Aug 17 10:32:34 2021
 @author: 零
 """
 
+import torch
+import numpy as np
+import torch.nn as nn
+
 class evaluator():
     def __init__(self, outputs, labels):
         self.outputs = outputs

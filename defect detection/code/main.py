@@ -33,7 +33,7 @@ from modelTrain import model_train
 torch.manual_seed(7)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-path = r"C:\Users\风\Desktop\表面缺陷检测\BSData-main\BSData-main"
+path = r"C:\Users\Administrator\Desktop\CV\表面缺陷检测\BSData-main\BSData-main"
 state = ["train", "eval"]
 input_size = (256, 512)
 batch_size = 2

@@ -5,6 +5,12 @@ Created on Tue Aug 17 10:32:55 2021
 @author: 零
 """
 
+import copy
+import torch
+import numpy as np
+import torch.nn as nn
+
+
 class model_train():
     def __init__(self, model, dataloader, evaluator, optimizer, num_epoch, state, device):
         self.model = model 
@@ -27,7 +33,7 @@ class model_train():
         
     def train(self):
         save_num = 1
-        for epoch in range(num_epoch):
+        for epoch in range(self.num_epoch):
             for state in self.state:
                 self.running_loss = 0.
                 self.running_acc = 0.
@@ -39,7 +45,7 @@ class model_train():
                 else:
                     self.model.eval()
                 for inputs, labels in self.dataloader[state]:
-                    inputs, labels = inputs.to(device), labels.to(device)
+                    inputs, labels = inputs.to(self.device), labels.to(self.device)
                     with torch.autograd.set_grad_enabled(state=="train"):
                         outputs = self.model(inputs)
                         loss = self.evaluator(outputs, labels).loss_fn()
@@ -60,7 +66,7 @@ class model_train():
                 epoch_acc_mIou = self.running_acc_mIou / len(self.dataloader[state].dataset)
                 epoch_acc_miou_p = self.running_acc_miou_p / len(self.dataloader[state].dataset)
                 epoch_acc_miou_n = self.running_acc_miou_n / len(self.dataloader[state].dataset) 
-                print("Epoch {}/{} __ Phase {} loss: {:.4f}, acc: {:.4f}, acc_mIou: {:.4f}, acc_miou_p: {:.4f}, acc_miou_n: {:.4f}". format(epoch+1, num_epoch, state, epoch_loss, epoch_acc, epoch_acc_mIou, epoch_acc_miou_p, epoch_acc_miou_n))
+                print("Epoch {}/{} __ Phase {} loss: {:.4f}, acc: {:.4f}, acc_mIou: {:.4f}, acc_miou_p: {:.4f}, acc_miou_n: {:.4f}". format(epoch+1, self.num_epoch, state, epoch_loss, epoch_acc, epoch_acc_mIou, epoch_acc_miou_p, epoch_acc_miou_n))
                 
                 if state == "eval":
                     print("{}".format("_"*45))

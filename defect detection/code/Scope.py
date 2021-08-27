@@ -5,6 +5,11 @@ Created on Tue Aug 17 10:28:46 2021
 @author: 零
 """
 
+import torch
+import torch.nn as nn
+from CBG import CBG_layer
+
+
 class Scope_layer(nn.Module):
     def __init__(self, n, in_feature, out_feature, kernel_size, stride, padding):
         super(Scope_layer, self).__init__()

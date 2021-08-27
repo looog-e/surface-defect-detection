@@ -5,6 +5,22 @@ Created on Tue Aug 17 10:23:42 2021
 @author: 零
 """
 
+import cv2
+import os 
+import torch
+import json
+import copy
+import random
+import numpy as np
+import pandas as pd
+from PIL import Image
+import torch.nn as nn
+import torch.functional as F
+from torchvision import datasets, transforms
+from torch.utils.data import Dataset, DataLoader, random_split, Subset, ConcatDataset
+from collections import OrderedDict
+
+
 class dataset_defectDetection(Dataset):
     def __init__(self, path, transform=None):
         super(dataset_defectDetection, self).__init__()

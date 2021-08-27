@@ -5,6 +5,10 @@ Created on Tue Aug 17 10:27:41 2021
 @author: 零
 """
 
+import torch
+import torch.nn as nn
+
+
 class CBS_layer(nn.Module):
     def __init__(self, in_feature, out_feature, kernel_size, stride, padding=0):
         super(CBS_layer, self).__init__()

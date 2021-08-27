@@ -5,6 +5,23 @@ Created on Tue Aug 17 10:31:02 2021
 @author: 零
 """
 
+import cv2
+import os 
+import torch
+import random
+import numpy as np
+from PIL import Image
+import torch.nn as nn
+import torch.functional as F
+from torchvision import datasets, transforms
+from torch.utils.data import Dataset, DataLoader, random_split, Subset, ConcatDataset
+from collections import OrderedDict
+from LBG import LBG_layer
+from CBG import CBG_layer
+from DBG import DBG_layer
+from Scope import Scope_layer
+from Residual import Res_layer
+
 class SegNet(nn.Module):
     def __init__(self, input_size, device):
         super(SegNet, self).__init__()

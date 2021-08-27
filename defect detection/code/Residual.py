@@ -5,6 +5,10 @@ Created on Tue Aug 17 10:29:40 2021
 @author: 零
 """
 
+import torch
+import torch.nn as nn
+from CBG import CBG_layer
+
 class Res_layer(nn.Module):
     def __init__(self, in_feature, out_feature, kernel_size, stride, padding):
         super(Res_layer, self).__init__()
