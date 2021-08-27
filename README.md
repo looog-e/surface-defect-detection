@@ -31,11 +31,11 @@ A semantic segmentation network for surface defect detection based on BSData dat
 通过语义分割网络成功实现检测的结果如下：
 <br>
 <div align=center>
-<img src="https://github.com/looog-e/surface-defect-detection/blob/main/ImageFolder/4.png" width = "300" height = "150" alt="" align=center /><img src="https://github.com/looog-e/surface-defect-detection/blob/main/ImageFolder/5.png" width = "300" height = "150" alt="" align=center /><img src="https://github.com/looog-e/surface-defect-detection/blob/main/ImageFolder/6.png" width = "300" height = "150" alt="" align=center />
+<img src="https://github.com/looog-e/surface-defect-detection/blob/main/ImageFolder/4.png" width = "250" height = "125" alt="" align=center /><img src="https://github.com/looog-e/surface-defect-detection/blob/main/ImageFolder/5.png" width = "250" height = "125" alt="" align=center /><img src="https://github.com/looog-e/surface-defect-detection/blob/main/ImageFolder/6.png" width = "250" height = "125" alt="" align=center />
 </div>
 <br>
 <div align=center>
-<img src="https://github.com/looog-e/surface-defect-detection/blob/main/ImageFolder/7.png" width = "300" height = "150" alt="" align=center /><img src="https://github.com/looog-e/surface-defect-detection/blob/main/ImageFolder/8.png" width = "300" height = "150" alt="" align=center /><img src="https://github.com/looog-e/surface-defect-detection/blob/main/ImageFolder/9.png" width = "300" height = "150" alt="" align=center />
+<img src="https://github.com/looog-e/surface-defect-detection/blob/main/ImageFolder/7.png" width = "250" height = "125" alt="" align=center /><img src="https://github.com/looog-e/surface-defect-detection/blob/main/ImageFolder/8.png" width = "250" height = "125" alt="" align=center /><img src="https://github.com/looog-e/surface-defect-detection/blob/main/ImageFolder/9.png" width = "250" height = "125" alt="" align=center />
 </div>
 
 由此可见实现的分割效果还是较为准确，但是该网络和官方提供的Mask R-CNN存在一样的问题，即对小目标很难准确检测到，而对一些细长的缺陷检测效果较差，且对于复杂情况很难分辨缺陷和非缺陷部分，这些问题都还有待提升。（该网络的主要优势是网络结构较小且检测精度还令人满意）
